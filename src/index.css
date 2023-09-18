@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +7,75 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #202225;
+  color: white;
+  box-sizing: border-box;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+  padding: 1rem;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2f3136;
+  color: inherit;
+  padding: 0px 20px;
+  gap: 1rem;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.nav > .site-title {
+  font-size: 1.7rem;
+  padding: 0.5rem;
+  font-weight: 600;
+}
+
+.nav .site-title:hover, .nav .site-title.active {
+  background-color: inherit;
+  color: inherit;
+}
+
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  font-weight: 700;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav a, .nav li {
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav a:hover, .nav a.active, .nav a:focus {
+  background-color: #202225;
+}
+
+
+
+.log-in-button {
+  background-color: #7289da;
+  color: white;
+  border-radius: 6px;
+  font-weight: 700;
 }
