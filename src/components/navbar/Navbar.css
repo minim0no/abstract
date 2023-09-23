@@ -1,0 +1,138 @@
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d1e22;
+    color: inherit;
+    padding-top: 24px;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    gap: 1rem;
+    font-family: 'Comfortaa', sans-serif;
+    position: sticky;
+    top: 0;
+    transition: padding 0.5s ease;
+}
+.left, .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav.scrolled {
+    transition: padding 0.1s ease;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav .left .site-title {
+    font-size: 1.7rem;
+    padding: 0.5rem;
+    font-weight: 600;
+    box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.269);
+}
+
+.nav a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    font-weight: 700;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.nav a, .nav li {
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.nav a:hover, .nav a.active{
+    background-color: #1d1e22;
+    box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.269);
+}
+
+#log-in-button {
+    background-color: #d68249;
+    color: white;
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.351);
+}
+.nav a#log-in-button.active, .nav a#log-in-button:hover {
+    background-color: #1d1e22;
+    color: #d68249;
+    border: 1px solid #d6814999;
+}
+
+.nav .menu {
+    display: none;
+    padding: 0.4rem 0.75rem;    
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+.nav .menu-icon {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 720px) {
+    .nav {
+        gap: 2rem;
+        flex-direction: column;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 18px;
+        transition: all 0.3s ease-in-out;
+    }
+    .nav > .left > .site-title {
+        display: block;
+        font-size: 1.7rem;
+    }
+    .nav ul {
+        display: none;
+        width: 100vw;
+        flex-direction: column;
+        gap: 0rem;
+    }
+    ul.open {
+        display: flex;
+    }
+    .nav li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        text-align: center;
+    }
+    .nav a:not(.site-title){
+        width: 100%;
+        border: none;
+        margin: 0.2rem 0.5rem;
+    }
+    .nav a:not(.site-title).active{
+        background-color: #2b2c31;
+        box-shadow: none;
+    }
+
+    .nav .menu {
+        display: block;
+    }
+    .left, .right {
+        gap: 8rem;
+    }
+    .nav.scrolled {
+        gap: 0rem;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
