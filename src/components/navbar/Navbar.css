@@ -1,4 +1,3 @@
-
 .nav {
     display: flex;
     justify-content: space-between;
@@ -8,21 +7,23 @@
     padding-top: 24px;
     padding-left: 10rem;
     padding-right: 10rem;
+    padding-bottom: 20px;
     gap: 1rem;
-    font-family: 'Comfortaa', sans-serif;
+    font-family: "Comfortaa", sans-serif;
     position: sticky;
     top: 0;
-    transition: padding 0.5s ease;
+    transition: padding 0.1s ease;
 }
-.left, .right{
+.left,
+.right {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
+
 .nav.scrolled {
     transition: padding 0.1s ease;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -50,31 +51,37 @@
     gap: 1rem;
 }
 
-.nav a, .nav li {
+.nav a,
+.nav li {
     border-radius: 10px;
-    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-.nav a:hover, .nav a.active{
+.nav a:hover,
+.nav a.active {
     background-color: #1d1e22;
     box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.269);
 }
+.nav a:hover {
+    transform: translateY(-0.25em);
+}
 
 #log-in-button {
+    background-color: #1d1e22;
+    color: #d68249;
+    border: 1px solid #d6814999;
+}
+.nav a#log-in-button.active,
+.nav a#log-in-button:hover {
     background-color: #d68249;
     color: white;
     font-weight: 700;
     border: 1px solid rgba(255, 255, 255, 0.351);
 }
-.nav a#log-in-button.active, .nav a#log-in-button:hover {
-    background-color: #1d1e22;
-    color: #d68249;
-    border: 1px solid #d6814999;
-}
 
 .nav .menu {
     display: none;
-    padding: 0.4rem 0.75rem;    
+    padding: 0.4rem 0.75rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
 }
@@ -84,10 +91,10 @@
     cursor: pointer;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .nav {
+        display: block;
         gap: 2rem;
-        flex-direction: column;
         padding-left: 1rem;
         padding-right: 1rem;
         padding-top: 18px;
@@ -104,21 +111,22 @@
         gap: 0rem;
     }
     ul.open {
+        margin-top: 1rem;
         display: flex;
     }
     .nav li {
         width: 100%;
         display: flex;
         justify-content: center;
-        align-self: center;
         text-align: center;
     }
-    .nav a:not(.site-title){
+    .nav a:not(.site-title) {
         width: 100%;
         border: none;
         margin: 0.2rem 0.5rem;
     }
-    .nav a:not(.site-title).active{
+    .nav a:not(.site-title).active,
+    .nav a:not(.site-title):hover {
         background-color: #2b2c31;
         box-shadow: none;
     }
@@ -126,11 +134,13 @@
     .nav .menu {
         display: block;
     }
-    .left, .right {
-        gap: 8rem;
+    .logo {
+        margin-right: auto;
+    }
+    .menu {
+        margin-left: auto;
     }
     .nav.scrolled {
-        gap: 0rem;
         padding-top: 12px;
         padding-bottom: 12px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
