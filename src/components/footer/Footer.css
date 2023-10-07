@@ -18,11 +18,12 @@
 .footer-top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .column-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     gap: 2rem;
     margin-top: 0.5rem;
@@ -58,16 +59,18 @@ a {
     text-align: center;
     margin-top: 1rem;
 }
+svg {
+    display: block;
+    overflow: visible;
+}
 
 @media (max-width: 768px) {
     .main-footer {
+        transition: all 0.3s ease-in-out;
         padding: 24px 1rem 20px 1rem;
     }
     .footer-column {
         align-items: center;
-    }
-    .social-list {
-        justify-content: center;
     }
     .footer-title {
         font-size: 1.2rem;

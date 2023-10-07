@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+
 import "./Footer.css";
 
 export default function Footer() {
@@ -11,26 +14,48 @@ export default function Footer() {
                     </Link>
                     <ul className="social-list">
                         <li>
-                            <Link to="#">Github</Link>
+                            <a
+                                href="https://github.com/Indred/abstract"
+                                target="_blank"
+                            >
+                                <FontAwesomeIcon
+                                    icon={faGithub}
+                                    style={{
+                                        color: "#d68249",
+                                        height: "1.5rem",
+                                    }}
+                                />
+                            </a>
                         </li>
                         <li>
-                            <Link to="#">LinkedIn</Link>
+                            <a
+                                href="https://www.linkedin.com/in/ahmed-idrees"
+                                target="_blank"
+                            >
+                                <FontAwesomeIcon
+                                    icon={faLinkedin}
+                                    style={{
+                                        color: "#d68249",
+                                        height: "1.5rem",
+                                    }}
+                                />
+                            </a>
                         </li>
                     </ul>
                 </div>
                 <div className="column-container">
                     <ul className="footer-column">
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link to="/discover">Discover</Link>
                         </li>
                         <li>
-                            <Link to="/about">About Us</Link>
+                            <Link to="/models">Models</Link>
                         </li>
                         <li>
-                            <Link to="/services">Services</Link>
+                            <Link to="/about">About</Link>
                         </li>
                         <li>
-                            <Link to="/login">Login</Link>
+                            <Link to="/login">Sign in</Link>
                         </li>
                     </ul>
                     <ul className="footer-column">

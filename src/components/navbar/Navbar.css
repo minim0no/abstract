@@ -9,7 +9,6 @@
     padding-right: 10rem;
     padding-bottom: 20px;
     gap: 1rem;
-    font-family: "Comfortaa", sans-serif;
     position: sticky;
     top: 0;
     transition: padding 0.1s ease;
@@ -28,10 +27,12 @@
 }
 
 .nav .left .site-title {
-    font-size: 1.7rem;
-    padding: 0.5rem;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    padding: 0.5rem 0.75rem;
     font-weight: 600;
     box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.269);
+    user-select: none;
 }
 
 .nav a {
@@ -41,6 +42,8 @@
     font-weight: 700;
     padding: 0.5rem 0.75rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.2rem;
+    white-space: nowrap;
 }
 
 .nav ul {
@@ -62,9 +65,6 @@
     background-color: #1d1e22;
     box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.269);
 }
-.nav a:hover {
-    transform: translateY(-0.25em);
-}
 
 #log-in-button {
     background-color: #1d1e22;
@@ -76,7 +76,6 @@
     background-color: #d68249;
     color: white;
     font-weight: 700;
-    border: 1px solid rgba(255, 255, 255, 0.351);
 }
 
 .nav .menu {
@@ -89,6 +88,10 @@
     height: 2rem;
     width: 2rem;
     cursor: pointer;
+}
+
+.hidden {
+    display: none;
 }
 
 @media (max-width: 768px) {
@@ -129,6 +132,7 @@
     .nav a:not(.site-title):hover {
         background-color: #2b2c31;
         box-shadow: none;
+        transform: translateY(-0.1em);
     }
 
     .nav .menu {
@@ -140,9 +144,12 @@
     .menu {
         margin-left: auto;
     }
-    .nav.scrolled {
+    .nav .scrolled {
         padding-top: 12px;
         padding-bottom: 12px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .nav .right {
+        margin-top: 1rem;
     }
 }

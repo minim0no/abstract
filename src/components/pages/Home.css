@@ -1,0 +1,60 @@
+.home-container {
+    padding-top: 10rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.hero {
+    display: flex;
+
+    text-align: left;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+}
+
+.hero-container {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #6c757d;
+}
+
+.hero-text {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-keyword {
+    color: #d68249;
+}
+
+.hero-image {
+    width: 340px;
+    height: 340px;
+    width: 100%;
+    background-color: #6c757d;
+    text-align: center;
+}
+
+.get-started-button {
+    height: 100%;
+    font-weight: 700;
+    padding: 0.5rem 0.75rem;
+    border-radius: 10px;
+    background-color: #1d1e22;
+    color: #d68249;
+    border: 2px solid #d6814999;
+    transition: all 0.3s ease-in-out;
+}
+
+.get-started-button:hover {
+    background-color: #d68249;
+    color: white;
+    font-weight: 700;
+    box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.269);
+}
