@@ -6,6 +6,12 @@ import "./Navbar.css";
 export default function Navbar() {
     //checks for scrolling and changes navbar border
     const [isScrolled, setIsScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+    console.log(menuOpen);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -23,9 +29,6 @@ export default function Navbar() {
         };
     }, []);
 
-    //checks for menu open and changes menu icon
-    const [menuOpen, setMenuOpen] = useState(false);
-
     return (
         <nav className={`nav ${isScrolled ? "scrolled" : ""}`}>
             <div className="left">
@@ -34,36 +37,29 @@ export default function Navbar() {
                         abstract
                     </Link>
                 </div>
-                <div
-                    className="menu"
-                    onClick={() => {
-                        setMenuOpen(!menuOpen);
-                    }}
-                >
+                <div className="menu" onClick={toggleMenu}>
                     <FaBars
-                        className={"menu-icon"}
-                        display={`${!menuOpen ? "block" : "none"}`}
+                        className={`menu-icon ${!menuOpen ? "" : "hidden"}`}
                     />
                     <FaTimes
-                        className={"menu-icon"}
-                        display={`${menuOpen ? "block" : "none"}`}
+                        className={`menu-icon ${!menuOpen ? "hidden" : ""}`}
                     />
                 </div>
             </div>
             <div className="right">
                 <ul className={menuOpen ? "open" : ""}>
                     <li>
-                        <NavLink to="/">Home</NavLink>
+                        <NavLink to="/discover">Discover</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/models">Models</NavLink>
                     </li>
                     <li>
                         <NavLink to="/about">About</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/services">Services</NavLink>
-                    </li>
-                    <li>
                         <NavLink to="/login" id="log-in-button">
-                            Login
+                            Sign in
                         </NavLink>
                     </li>
                 </ul>
