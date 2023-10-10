@@ -6,13 +6,11 @@
 
 .hero {
     display: flex;
-
     text-align: left;
-    height: 100vh;
 }
 
-h1 {
-    font-size: 4rem;
+.hero-title {
+    font-size: 4.7rem;
     font-weight: 800;
     color: #fff;
     margin: 0;
@@ -31,6 +29,7 @@ h1 {
 
 .hero-keyword {
     color: #d68249;
+    font-weight: 700;
 }
 
 .hero-image {
@@ -42,14 +41,18 @@ h1 {
 }
 
 .get-started-button {
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
     font-weight: 700;
     padding: 0.5rem 0.75rem;
     border-radius: 10px;
     background-color: #1d1e22;
     color: #d68249;
     border: 2px solid #d6814999;
-    transition: all 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+    font-size: 1.2rem;
 }
 
 .get-started-button:hover {
@@ -57,4 +60,31 @@ h1 {
     color: white;
     font-weight: 700;
     box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.269);
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        margin-top: 3rem;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+    .hero-title {
+        margin-top: 1rem;
+        font-size: 2.5rem;
+    }
+    .hero-text {
+        font-size: 1.7rem;
+    }
+
+    .get-started-button {
+        width: auto;
+    }
 }

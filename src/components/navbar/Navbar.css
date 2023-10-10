@@ -13,10 +13,10 @@
     top: 0;
     transition: padding 0.1s ease;
 }
-.left,
 .right {
     display: flex;
     align-items: center;
+    background-color: transparent;
 }
 
 .nav.scrolled {
@@ -26,7 +26,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.nav .left .site-title {
+.nav .site-title {
     font-size: 2rem;
     letter-spacing: 1px;
     padding: 0.5rem 0.75rem;
@@ -83,11 +83,16 @@
     padding: 0.4rem 0.75rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
+    background-color: #1d1e22;
 }
 .nav .menu-icon {
     height: 2rem;
     width: 2rem;
     cursor: pointer;
+}
+
+.menu-close {
+    display: none;
 }
 
 .hidden {
@@ -96,31 +101,34 @@
 
 @media (max-width: 768px) {
     .nav {
-        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         gap: 2rem;
         padding-left: 1rem;
         padding-right: 1rem;
         padding-top: 18px;
         transition: all 0.3s ease-in-out;
     }
-    .nav > .left > .site-title {
-        display: block;
+    .nav > .site-title {
         font-size: 1.7rem;
     }
     .nav ul {
-        display: none;
+        display: flex;
+        align-items: center;
         width: 100vw;
         flex-direction: column;
-        gap: 0rem;
+        gap: 0.5rem;
     }
-    ul.open {
-        margin-top: 1rem;
-        display: flex;
+    .nav.scrolled {
+        transition: padding 0.1s ease;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     .nav li {
         width: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
         text-align: center;
     }
     .nav a:not(.site-title) {
@@ -136,20 +144,25 @@
     }
 
     .nav .menu {
-        display: block;
+        display: flex;
     }
-    .logo {
-        margin-right: auto;
-    }
-    .menu {
-        margin-left: auto;
-    }
-    .nav .scrolled {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    .nav .menu-close {
+        display: flex;
+        margin-bottom: 2rem;
     }
     .nav .right {
-        margin-top: 1rem;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 0;
+        width: 0;
+        background-color: transparent;
+        padding-bottom: 1rem;
+    }
+
+    .nav .right.open {
+        height: 100vh;
+        width: 100vw;
+        background-color: #1d1e22;
     }
 }

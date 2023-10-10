@@ -69,7 +69,7 @@ export default function Footer() {
                             <Link to="#">Accessibility</Link>
                         </li>
                         <li>
-                            <Link to="#">IDK</Link>
+                            <Link to="#">some other shit idk</Link>
                         </li>
                     </ul>
                 </div>
