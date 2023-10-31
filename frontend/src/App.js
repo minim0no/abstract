@@ -1,11 +1,11 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
-import Home from "./components/pages/Home";
-import About from "./components/pages/About";
-import Discover from "./components/pages/Discover";
-import Models from "./components/pages/Models";
-import Login from "./components/pages/Login";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Discover from "./pages/Discover";
+import Models from "./pages/Models";
+import Login from "./pages/Login";
 import Footer from "./components/footer/Footer";
 
 function App() {

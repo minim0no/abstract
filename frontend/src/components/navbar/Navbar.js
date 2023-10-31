@@ -7,7 +7,6 @@ export default function Navbar() {
     //checks for scrolling and changes navbar border
     const [isScrolled, setIsScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
-    console.log(menuOpen);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);

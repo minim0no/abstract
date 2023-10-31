@@ -84,6 +84,7 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     background-color: #1d1e22;
+    cursor: pointer;
 }
 .nav .menu-icon {
     height: 2rem;
