@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
 
-export default function Navbar() {
+export default function Navbar({ toggleLogin }) {
     //checks for scrolling and changes navbar border
     const [isScrolled, setIsScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
@@ -56,10 +56,8 @@ export default function Navbar() {
                     <li onClick={toggleMenu}>
                         <NavLink to="/about">About</NavLink>
                     </li>
-                    <li onClick={toggleMenu}>
-                        <NavLink to="/login" id="log-in-button">
-                            Sign in
-                        </NavLink>
+                    <li onClick={toggleLogin}>
+                        <Link className="log-in-button">Sign in</Link>
                     </li>
                 </ul>
             </div>

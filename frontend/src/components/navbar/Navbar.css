@@ -66,13 +66,13 @@
     box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.269);
 }
 
-#log-in-button {
+.nav .log-in-button {
     background-color: #1d1e22;
     color: #d68249;
     border: 1px solid #d6814999;
 }
-.nav a#log-in-button.active,
-.nav a#log-in-button:hover {
+.nav .log-in-button.active,
+.nav .log-in-button:hover {
     background-color: #d68249;
     color: white;
     font-weight: 700;
